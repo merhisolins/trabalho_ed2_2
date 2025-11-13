@@ -18,11 +18,11 @@ int *build_winner_tree(int *values, int n, int *size_out) {
     int *tree = (int*)malloc(tree_size * sizeof(int));
     if (!tree) return NULL;
 
-    // folhas
+    
     for (int i = 0; i < size; ++i) {
         tree[size + i] = (i < n) ? i : -1;
     }
-    // nós internos
+    
     for (int i = size - 1; i >= 1; --i) {
         tree[i] = winner_index(tree[2 * i], tree[2 * i + 1], values);
     }
