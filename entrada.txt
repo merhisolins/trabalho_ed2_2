@@ -1,0 +1,5 @@
+resultado_final.dat
+partições/particao1.dat
+partições/particao2.dat
+partições/particao3.dat
+partições/particao4.dat
