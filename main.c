@@ -18,13 +18,13 @@ typedef struct {
 
 static void rstrip(char *s){
     int n = (int)strlen(s);
-    while (n > 0 && (s[n-1]=='\n' || s[n-1]=='\r' || isspace((unsigned char)s[n-1])))
+    while (n > 0 && (s[n-1]=='\n' || s[n-1]=='\r' || isspace((char)s[n-1])))
         s[--n] = '\0';
 }
 static char* trim_inplace(char *s){
     rstrip(s);
     char *p = s;
-    while (*p && isspace((unsigned char)*p)) p++;
+    while (*p && isspace((char)*p)) p++;
     if (p != s) memmove(s, p, strlen(p)+1);
     return s;
 }
